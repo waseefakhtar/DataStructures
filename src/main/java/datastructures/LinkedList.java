@@ -38,5 +38,37 @@ public class LinkedList {
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
+
+        System.out.println("");
+    }
+
+    public static LinkedList deleteByKey(LinkedList list, int key) {
+        Node currNode = list.head;
+        Node prev = null;
+
+        if (currNode != null && currNode.data == key) {
+            list.head = currNode.next;
+
+            System.out.println(key + " found and deleted");
+
+            return list;
+        }
+
+        while (currNode != null && currNode.data != key) {
+            prev = currNode;
+            currNode = currNode.next;
+        }
+
+        if (currNode != null) {
+            prev.next = currNode.next;
+
+            System.out.println(key + " found and deleted");
+        }
+
+        if (currNode == null) {
+            System.out.println(key + " not found");
+        }
+
+        return list;
     }
 }

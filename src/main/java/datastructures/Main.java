@@ -12,6 +12,11 @@ public class Main {
         linkedList = LinkedList.insert(linkedList, 5);
 
         linkedList.printList(linkedList);
+
+        linkedList = LinkedList.deleteByKey(linkedList, 0);
+        linkedList = LinkedList.deleteByKey(linkedList, 1);
+
+        linkedList.printList(linkedList);
     }
 }
 

@@ -22,7 +22,21 @@ public class Main {
 
         linkedList.printList(linkedList);*/
 
-        Stack stack = new Stack();
+        /*Stack stack = new Stack();
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        stack.isEmpty();
+        stack.pop();
+        stack.peek();
+        stack.pop();
+        stack.peek();*/
+
+        StackAsLinkedList stack = new StackAsLinkedList();
 
         stack.push(1);
         stack.push(2);

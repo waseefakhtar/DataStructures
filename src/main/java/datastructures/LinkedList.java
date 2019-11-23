@@ -71,4 +71,37 @@ public class LinkedList {
 
         return list;
     }
+
+    public static LinkedList deleteAtPosition(LinkedList list, int position) {
+        Node currNode = list.head;
+        Node prev = null;
+
+        if (position == 0 && currNode != null) {
+            list.head = currNode.next;
+
+            System.out.println(position + " position element deleted");
+            return list;
+        }
+
+        int counter = 0;
+
+        while (currNode != null) {
+            if (counter == position) {
+                prev.next = currNode.next;
+
+                System.out.println(position + " position element deleted");
+                break;
+            } else {
+                prev = currNode;
+                currNode = currNode.next;
+                counter++;
+            }
+        }
+
+        if (currNode == null) {
+            System.out.println(position + " position element not found");
+        }
+
+        return list;
+    }
 }

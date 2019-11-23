@@ -17,6 +17,10 @@ public class Main {
         linkedList = LinkedList.deleteByKey(linkedList, 1);
 
         linkedList.printList(linkedList);
+
+        linkedList = LinkedList.deleteAtPosition(linkedList, 1);
+
+        linkedList.printList(linkedList);
     }
 }
 

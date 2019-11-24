@@ -36,7 +36,7 @@ public class Main {
         stack.pop();
         stack.peek();*/
 
-        StackAsLinkedList stack = new StackAsLinkedList();
+        /*StackAsLinkedList stack = new StackAsLinkedList();
 
         stack.push(1);
         stack.push(2);
@@ -48,7 +48,21 @@ public class Main {
         stack.pop();
         stack.peek();
         stack.pop();
-        stack.peek();
+        stack.peek();*/
+
+        Queue queue = new Queue(5);
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+
+        queue.isFull(queue);
+
+        queue.dequeue();
+        queue.dequeue();
+
     }
 }
 

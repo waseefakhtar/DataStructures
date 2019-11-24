@@ -50,7 +50,7 @@ public class Main {
         stack.pop();
         stack.peek();*/
 
-        Queue queue = new Queue(5);
+        /*Queue queue = new Queue(5);
 
         queue.enqueue(1);
         queue.enqueue(2);
@@ -61,8 +61,20 @@ public class Main {
         queue.isFull(queue);
 
         queue.dequeue();
-        queue.dequeue();
+        queue.dequeue();*/
 
+        HashMap hashMap = new HashMap(10);
+
+        hashMap.put(1, "Steve");
+        hashMap.put(2, "Bill");
+        hashMap.put(2, "Jack");
+        hashMap.put(3, "Elon");
+        hashMap.put(4, "Jeff");
+        hashMap.put(5, "Mark");
+        hashMap.put(1, "Wozniak");
+
+        hashMap.get(2);
+        hashMap.get(1);
     }
 }
 

@@ -76,14 +76,14 @@ public class Main {
         hashMap.get(2);
         hashMap.get(1);*/
 
-        Array array = new Array(3);
+        Array numbers = new Array(3);
 
-        array.insert(10);
-        array.insert(20);
-        array.insert(30);
-        array.insert(40);
-        array.removeAt(1);
-        array.print();
+        numbers.insert(10);
+        numbers.insert(20);
+        numbers.insert(30);
+        numbers.insert(40);
+        numbers.removeAt(1);
+        numbers.print();
 
     }
 }

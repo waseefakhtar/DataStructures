@@ -82,6 +82,7 @@ public class Main {
         array.insert(20);
         array.insert(30);
         array.insert(40);
+        array.removeAt(1);
         array.print();
 
     }

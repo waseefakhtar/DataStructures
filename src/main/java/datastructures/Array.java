@@ -12,7 +12,6 @@ public class Array {
     }
 
     public void insert(int item) {
-        // If the array is full, resize it.
         if (intArray.length == count) {
             int[] newItems = new int[count * 2];
 
@@ -23,7 +22,6 @@ public class Array {
             intArray = newItems;
         }
 
-        // Add the new item at the end.
         intArray[count++] = item;
     }
 
@@ -43,23 +41,14 @@ public class Array {
     }
 
     public void removeAt(int index) {
-        if (index == intArray.length - 1) {
-            int[] tempArray = intArray;
-            intArray = new int[intArray.length - 1];
-            for (int i = 0; i < intArray.length; i++) {
-                intArray[i] = tempArray[i];
-            }
-            return;
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException();
         }
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (i == index) {
-                //int[] tempArray = intArray;
-                //intArray = new int[intArray.length - 1];
-                for (int j = index; j < intArray.length; j++) {
-                    intArray[j] = intArray[j + 1 % (intArray.length - 2)];
-                }
-            }
+        for (int i = index; i < count; i++) {
+            intArray[i] = intArray[i + 1];
         }
+
+        count--;
     }
 }

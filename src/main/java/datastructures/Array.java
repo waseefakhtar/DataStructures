@@ -4,11 +4,10 @@ import java.util.Arrays;
 
 public class Array {
 
-    int[] intArray;
-    int position;
+    private int[] intArray;
 
     public Array(int length) {
-        intArray = new int[3];
+        intArray = new int[length];
     }
 
     public void insert(int item) {

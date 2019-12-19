@@ -4,36 +4,36 @@ import java.util.Arrays;
 
 public class Array {
 
-    private int[] intArray;
+    private int[] items;
     int count;
 
     public Array(int length) {
-        intArray = new int[length];
+        items = new int[length];
     }
 
     public void insert(int item) {
-        if (intArray.length == count) {
+        if (items.length == count) {
             int[] newItems = new int[count * 2];
 
             for (int i = 0; i < count; i++) {
-                newItems[i] = intArray[i];
+                newItems[i] = items[i];
             }
 
-            intArray = newItems;
+            items = newItems;
         }
 
-        intArray[count++] = item;
+        items[count++] = item;
     }
 
     public void print() {
         for (int i = 0; i < count; i++) {
-            System.out.println(intArray[i]);
+            System.out.println(items[i]);
         }
     }
 
     public int indexOf(int item) {
         for (int i = 0; i < count; i++) {
-            if (intArray[i] == item) {
+            if (items[i] == item) {
                 return i;
             }
         }
@@ -46,7 +46,7 @@ public class Array {
         }
 
         for (int i = index; i < count; i++) {
-            intArray[i] = intArray[i + 1];
+            items[i] = items[i + 1];
         }
 
         count--;

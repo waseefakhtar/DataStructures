@@ -13,6 +13,16 @@ public class Array {
 
     public void insert(int item) {
         // If the array is full, resize it.
+        if (intArray.length == count) {
+            int[] newItems = new int[count * 2];
+
+            for (int i = 0; i < count; i++) {
+                newItems[i] = intArray[i];
+            }
+
+            intArray = newItems;
+        }
+
         // Add the new item at the end.
         intArray[count++] = item;
     }

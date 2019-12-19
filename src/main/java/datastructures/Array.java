@@ -5,29 +5,22 @@ import java.util.Arrays;
 public class Array {
 
     private int[] intArray;
+    int count;
 
     public Array(int length) {
         intArray = new int[length];
     }
 
     public void insert(int item) {
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] == 0) {
-                intArray[i] = item;
-                return;
-            }
-        }
-
-        int[] tempArray = intArray;
-        intArray = new int[intArray.length + 1];
-        for (int i = 0; i < tempArray.length; i++) {
-            intArray[i] = tempArray[i];
-        }
-        intArray[intArray.length - 1] = item;
+        // If the array is full, resize it.
+        // Add the new item at the end.
+        intArray[count++] = item;
     }
 
     public void print() {
-        System.out.println(Arrays.toString(intArray));
+        for (int i = 0; i < count; i++) {
+            System.out.println(intArray[i]);
+        }
     }
 
     public int indexOf(int item) {

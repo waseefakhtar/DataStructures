@@ -63,7 +63,7 @@ public class Main {
         queue.dequeue();
         queue.dequeue();*/
 
-        HashMap hashMap = new HashMap(10);
+        /*HashMap hashMap = new HashMap(10);
 
         hashMap.put(1, "Steve");
         hashMap.put(2, "Bill");
@@ -74,7 +74,18 @@ public class Main {
         hashMap.put(1, "Wozniak");
 
         hashMap.get(2);
-        hashMap.get(1);
+        hashMap.get(1);*/
+
+        Array array = new Array(3);
+
+        array.insert(10);
+        array.insert(20);
+        array.insert(30);
+        array.insert(40);
+        //array.removeAt(2);
+        System.out.println(array.indexOf(100));
+        array.print();
+
     }
 }
 

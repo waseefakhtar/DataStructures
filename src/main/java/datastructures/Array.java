@@ -32,7 +32,7 @@ public class Array {
     }
 
     public int indexOf(int item) {
-        for (int i = 0; i < intArray.length; i++) {
+        for (int i = 0; i < count; i++) {
             if (intArray[i] == item) {
                 return i;
             }

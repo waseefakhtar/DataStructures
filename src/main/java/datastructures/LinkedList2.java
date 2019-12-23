@@ -39,22 +39,31 @@ public class LinkedList2 {
 
     // deleteFirst
     // deleteLast
-    // contains
 
-    public int indexOf(int item) {
-        int count = 0;
-
+    public boolean contains(int item) {
         while (first != null) {
             if (first.value == item) {
-                System.out.println(count);
-                return count;
+                return true;
             }
 
             first = first.next;
+        }
+
+        return false;
+    }
+
+    public int indexOf(int item) {
+        int count = 0;
+        Node currentItem = first;
+        while (currentItem != null) {
+            if (currentItem.value == item) {
+                return count;
+            }
+
+            currentItem = currentItem.next;
             count++;
         }
 
-        System.out.println(-1);
         return -1;
     }
 }

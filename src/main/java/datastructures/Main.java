@@ -92,6 +92,8 @@ public class Main {
 
         linkedList2.addFirst(40);
         linkedList2.indexOf(30);
+
+        System.out.println(linkedList2.contains(1));
     }
 }
 

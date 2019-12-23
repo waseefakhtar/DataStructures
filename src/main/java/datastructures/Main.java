@@ -76,14 +76,19 @@ public class Main {
         hashMap.get(2);
         hashMap.get(1);*/
 
-        Array numbers = new Array(3);
+        /*Array numbers = new Array(3);
 
         numbers.insert(10);
         numbers.insert(20);
         numbers.insert(30);
         numbers.insert(40);
         numbers.removeAt(1);
-        numbers.print();
+        numbers.print();*/
+
+        LinkedList2 linkedList2 = new LinkedList2();
+        linkedList2.addLast(10);
+        linkedList2.addLast(20);
+        linkedList2.addLast(30);
 
     }
 }

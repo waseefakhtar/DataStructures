@@ -13,12 +13,18 @@ public class LinkedList2 {
         }
     }
 
-    // addFirst
-    public void addFirst(int value) {
+    public void addFirst(int item) {
+        Node node = new Node(item);
 
+        if (this.first == null) {
+            this.first = node;
+            this.last = node;
+        } else {
+            node.next = first;
+            this.first = node;
+        }
     }
 
-    // addLast
     public void addLast(int item) {
         Node node = new Node(item);
 

@@ -90,6 +90,8 @@ public class Main {
         linkedList2.addLast(20);
         linkedList2.addLast(30);
 
+        linkedList2.addFirst(40);
+
     }
 }
 

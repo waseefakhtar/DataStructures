@@ -94,6 +94,7 @@ public class Main {
         linkedList2.indexOf(30);
 
         System.out.println(linkedList2.contains(1));
+        linkedList2.deleteFirst();
     }
 }
 

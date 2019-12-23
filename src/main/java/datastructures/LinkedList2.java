@@ -1,5 +1,7 @@
 package datastructures;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList2 {
     private Node first;
     private Node last;
@@ -37,16 +39,32 @@ public class LinkedList2 {
         }
     }
 
-    // deleteFirst
+    public void deleteFirst() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+
+        // For a single item in the list.
+        if (first == last) {
+            first = null;
+            last = null;
+        }
+
+        Node second = first.next;
+        first.next = null;
+        first = second;
+    }
+
     // deleteLast
 
     public boolean contains(int item) {
-        while (first != null) {
-            if (first.value == item) {
+        Node currentItem = first;
+        while (currentItem != null) {
+            if (currentItem.value == item) {
                 return true;
             }
 
-            first = first.next;
+            currentItem = currentItem.next;
         }
 
         return false;

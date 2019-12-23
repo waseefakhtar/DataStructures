@@ -95,6 +95,7 @@ public class Main {
 
         System.out.println(linkedList2.contains(1));
         linkedList2.deleteFirst();
+        linkedList2.deleteLast();
     }
 }
 

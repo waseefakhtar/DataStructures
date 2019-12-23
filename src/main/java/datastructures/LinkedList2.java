@@ -48,6 +48,7 @@ public class LinkedList2 {
         if (first == last) {
             first = null;
             last = null;
+            return;
         }
 
         Node second = first.next;
@@ -55,7 +56,29 @@ public class LinkedList2 {
         first = second;
     }
 
-    // deleteLast
+    public void deleteLast() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
+
+        // For a single item in the list.
+        if (first == last) {
+            first = null;
+            last = null;
+            return;
+        }
+
+        Node current = first;
+        while (current != null) {
+            if (current.next == last) {
+                break;
+            }
+            current = current.next;
+        }
+
+        last = current;
+        current.next = null;
+    }
 
     public boolean contains(int item) {
         Node currentItem = first;

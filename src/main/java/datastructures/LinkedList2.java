@@ -40,5 +40,21 @@ public class LinkedList2 {
     // deleteFirst
     // deleteLast
     // contains
-    // indexOf
+
+    public int indexOf(int item) {
+        int count = 0;
+
+        while (first != null) {
+            if (first.value == item) {
+                System.out.println(count);
+                return count;
+            }
+
+            first = first.next;
+            count++;
+        }
+
+        System.out.println(-1);
+        return -1;
+    }
 }

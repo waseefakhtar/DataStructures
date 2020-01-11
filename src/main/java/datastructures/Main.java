@@ -1,5 +1,9 @@
 package datastructures;
 
+import java.awt.SystemTray;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
 
     public static void main(String[] arg) {
@@ -85,7 +89,7 @@ public class Main {
         numbers.removeAt(1);
         numbers.print();*/
 
-        LinkedList2 linkedList2 = new LinkedList2();
+        /*LinkedList2 linkedList2 = new LinkedList2();
         linkedList2.addLast(10);
         linkedList2.addLast(20);
         linkedList2.addLast(30);
@@ -95,7 +99,16 @@ public class Main {
 
         System.out.println(linkedList2.contains(1));
         linkedList2.deleteFirst();
-        linkedList2.deleteLast();
+        linkedList2.deleteLast();*/
+
+        TreeNode treeNode = new TreeNode(5);
+        treeNode.left = new TreeNode(3);
+        treeNode.right = new TreeNode(6);
+        treeNode.left.left = new TreeNode(2);
+        treeNode.left.right = new TreeNode(4);
+        treeNode.right.right = new TreeNode(7);
+
+        System.out.println(treeNode.findTarget(treeNode, 9));
     }
 }
 
